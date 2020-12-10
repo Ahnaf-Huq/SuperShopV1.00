@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SuperShopMainV1._00
 {
-    public partial class Form1 : Form
+    public partial class ClubCustomerDashborad : Form
     {
-        public Form1()
+        public ClubCustomerDashborad()
         {
             InitializeComponent();
+        }
+
+        private void ClubCustomerDashboarplanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

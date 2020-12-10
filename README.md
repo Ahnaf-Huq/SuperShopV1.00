@@ -1,2 +1,2 @@
 # SuperShopV1.00
-supershop management project by nai inc.
+Supershop management project by nai inc.
