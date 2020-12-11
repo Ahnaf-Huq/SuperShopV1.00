@@ -21,5 +21,19 @@ namespace SuperShopMainV1._00
         {
 
         }
+
+        private void SalesButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesmanDashboar ssld = new SalesmanDashboar();
+            ssld.Show();
+        }
+
+        private void logoutbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login logout = new Login();
+            logout.Show();
+        }
     }
 }

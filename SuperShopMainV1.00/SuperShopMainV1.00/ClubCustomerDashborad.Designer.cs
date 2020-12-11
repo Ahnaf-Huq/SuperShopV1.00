@@ -35,23 +35,23 @@
             this.SalesButton = new System.Windows.Forms.Button();
             this.clubdashboardpicbox = new System.Windows.Forms.PictureBox();
             this.ClubCustomerDashboarplanel1 = new System.Windows.Forms.Panel();
+            this.Address = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Phone = new System.Windows.Forms.Label();
+            this.PhneTextClub = new System.Windows.Forms.TextBox();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.addedbutton = new System.Windows.Forms.Button();
             this.CustomerEmailLabel = new System.Windows.Forms.Label();
             this.CustomerEmailTextbox = new System.Windows.Forms.TextBox();
             this.datelabel = new System.Windows.Forms.Label();
-            this.ProductNameSalesLabel = new System.Windows.Forms.Label();
-            this.ProductNametextBox = new System.Windows.Forms.TextBox();
             this.CustomrNameSalesDashboar = new System.Windows.Forms.Label();
             this.SalesData = new System.Windows.Forms.DateTimePicker();
             this.CustomerNameTextboxSales = new System.Windows.Forms.TextBox();
-            this.Phone = new System.Windows.Forms.Label();
-            this.PhneTextClub = new System.Windows.Forms.TextBox();
-            this.Address = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.clubcustomerdatagrid = new System.Windows.Forms.DataGridView();
             this.ClubDashboardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clubdashboardpicbox)).BeginInit();
             this.ClubCustomerDashboarplanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clubcustomerdatagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // ClubDashboardPanel
@@ -80,6 +80,7 @@
             this.logoutbutton.TabIndex = 2;
             this.logoutbutton.Text = "Logout";
             this.logoutbutton.UseVisualStyleBackColor = true;
+            this.logoutbutton.Click += new System.EventHandler(this.logoutbutton_Click);
             // 
             // Addcutomerbutton
             // 
@@ -108,6 +109,7 @@
             this.SalesButton.TabIndex = 0;
             this.SalesButton.Text = "Sale Products";
             this.SalesButton.UseVisualStyleBackColor = true;
+            this.SalesButton.Click += new System.EventHandler(this.SalesButton_Click);
             // 
             // clubdashboardpicbox
             // 
@@ -136,8 +138,6 @@
             this.ClubCustomerDashboarplanel1.Controls.Add(this.CustomerEmailLabel);
             this.ClubCustomerDashboarplanel1.Controls.Add(this.CustomerEmailTextbox);
             this.ClubCustomerDashboarplanel1.Controls.Add(this.datelabel);
-            this.ClubCustomerDashboarplanel1.Controls.Add(this.ProductNameSalesLabel);
-            this.ClubCustomerDashboarplanel1.Controls.Add(this.ProductNametextBox);
             this.ClubCustomerDashboarplanel1.Controls.Add(this.CustomrNameSalesDashboar);
             this.ClubCustomerDashboarplanel1.Controls.Add(this.SalesData);
             this.ClubCustomerDashboarplanel1.Controls.Add(this.CustomerNameTextboxSales);
@@ -146,6 +146,48 @@
             this.ClubCustomerDashboarplanel1.Size = new System.Drawing.Size(657, 168);
             this.ClubCustomerDashboarplanel1.TabIndex = 3;
             this.ClubCustomerDashboarplanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.ClubCustomerDashboarplanel1_Paint);
+            // 
+            // Address
+            // 
+            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Address.AutoSize = true;
+            this.Address.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.Location = new System.Drawing.Point(11, 108);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(59, 15);
+            this.Address.TabIndex = 22;
+            this.Address.Text = "Address:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(123, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(274, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // Phone
+            // 
+            this.Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Phone.AutoSize = true;
+            this.Phone.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone.Location = new System.Drawing.Point(11, 78);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(49, 15);
+            this.Phone.TabIndex = 20;
+            this.Phone.Text = "Phone:";
+            // 
+            // PhneTextClub
+            // 
+            this.PhneTextClub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhneTextClub.Location = new System.Drawing.Point(123, 76);
+            this.PhneTextClub.Name = "PhneTextClub";
+            this.PhneTextClub.Size = new System.Drawing.Size(274, 20);
+            this.PhneTextClub.TabIndex = 19;
             // 
             // RemoveBtn
             // 
@@ -181,7 +223,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CustomerEmailLabel.AutoSize = true;
             this.CustomerEmailLabel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerEmailLabel.Location = new System.Drawing.Point(11, 78);
+            this.CustomerEmailLabel.Location = new System.Drawing.Point(11, 52);
             this.CustomerEmailLabel.Name = "CustomerEmailLabel";
             this.CustomerEmailLabel.Size = new System.Drawing.Size(41, 15);
             this.CustomerEmailLabel.TabIndex = 14;
@@ -191,7 +233,7 @@
             // 
             this.CustomerEmailTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomerEmailTextbox.Location = new System.Drawing.Point(123, 76);
+            this.CustomerEmailTextbox.Location = new System.Drawing.Point(123, 50);
             this.CustomerEmailTextbox.Name = "CustomerEmailTextbox";
             this.CustomerEmailTextbox.Size = new System.Drawing.Size(274, 20);
             this.CustomerEmailTextbox.TabIndex = 13;
@@ -206,27 +248,6 @@
             this.datelabel.Size = new System.Drawing.Size(40, 17);
             this.datelabel.TabIndex = 7;
             this.datelabel.Text = "Date:";
-            // 
-            // ProductNameSalesLabel
-            // 
-            this.ProductNameSalesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductNameSalesLabel.AutoSize = true;
-            this.ProductNameSalesLabel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameSalesLabel.Location = new System.Drawing.Point(11, 52);
-            this.ProductNameSalesLabel.Name = "ProductNameSalesLabel";
-            this.ProductNameSalesLabel.Size = new System.Drawing.Size(96, 15);
-            this.ProductNameSalesLabel.TabIndex = 4;
-            this.ProductNameSalesLabel.Text = "Product Name:";
-            // 
-            // ProductNametextBox
-            // 
-            this.ProductNametextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductNametextBox.Location = new System.Drawing.Point(123, 50);
-            this.ProductNametextBox.Name = "ProductNametextBox";
-            this.ProductNametextBox.Size = new System.Drawing.Size(274, 20);
-            this.ProductNametextBox.TabIndex = 3;
             // 
             // CustomrNameSalesDashboar
             // 
@@ -258,47 +279,15 @@
             this.CustomerNameTextboxSales.Size = new System.Drawing.Size(274, 20);
             this.CustomerNameTextboxSales.TabIndex = 0;
             // 
-            // Phone
+            // clubcustomerdatagrid
             // 
-            this.Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.clubcustomerdatagrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Phone.AutoSize = true;
-            this.Phone.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(11, 104);
-            this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(49, 15);
-            this.Phone.TabIndex = 20;
-            this.Phone.Text = "Phone:";
-            // 
-            // PhneTextClub
-            // 
-            this.PhneTextClub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhneTextClub.Location = new System.Drawing.Point(123, 102);
-            this.PhneTextClub.Name = "PhneTextClub";
-            this.PhneTextClub.Size = new System.Drawing.Size(274, 20);
-            this.PhneTextClub.TabIndex = 19;
-            // 
-            // Address
-            // 
-            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.AutoSize = true;
-            this.Address.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(11, 134);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(59, 15);
-            this.Address.TabIndex = 22;
-            this.Address.Text = "Address:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(123, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 21;
+            this.clubcustomerdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clubcustomerdatagrid.Location = new System.Drawing.Point(183, 296);
+            this.clubcustomerdatagrid.Name = "clubcustomerdatagrid";
+            this.clubcustomerdatagrid.Size = new System.Drawing.Size(656, 365);
+            this.clubcustomerdatagrid.TabIndex = 4;
             // 
             // ClubCustomerDashborad
             // 
@@ -306,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SuperShopMainV1._00.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(852, 697);
+            this.Controls.Add(this.clubcustomerdatagrid);
             this.Controls.Add(this.ClubCustomerDashboarplanel1);
             this.Controls.Add(this.clubdashboardpicbox);
             this.Controls.Add(this.ClubDashboardPanel);
@@ -317,6 +307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.clubdashboardpicbox)).EndInit();
             this.ClubCustomerDashboarplanel1.ResumeLayout(false);
             this.ClubCustomerDashboarplanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clubcustomerdatagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,12 +327,11 @@
         private System.Windows.Forms.Label CustomerEmailLabel;
         private System.Windows.Forms.TextBox CustomerEmailTextbox;
         private System.Windows.Forms.Label datelabel;
-        private System.Windows.Forms.Label ProductNameSalesLabel;
-        private System.Windows.Forms.TextBox ProductNametextBox;
         private System.Windows.Forms.Label CustomrNameSalesDashboar;
         private System.Windows.Forms.DateTimePicker SalesData;
         private System.Windows.Forms.TextBox CustomerNameTextboxSales;
         private System.Windows.Forms.Label Address;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView clubcustomerdatagrid;
     }
 }

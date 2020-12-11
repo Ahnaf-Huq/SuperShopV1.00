@@ -37,6 +37,7 @@
             this.passwrodbox = new System.Windows.Forms.TextBox();
             this.Loginbutton = new System.Windows.Forms.Button();
             this.RoleSelect = new System.Windows.Forms.ComboBox();
+            this.Exitbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Login_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,13 +128,14 @@
             this.Loginbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.Loginbutton.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Loginbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Loginbutton.Location = new System.Drawing.Point(294, 279);
+            this.Loginbutton.Location = new System.Drawing.Point(238, 267);
             this.Loginbutton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Loginbutton.Name = "Loginbutton";
             this.Loginbutton.Size = new System.Drawing.Size(97, 38);
             this.Loginbutton.TabIndex = 7;
             this.Loginbutton.Text = "Login";
             this.Loginbutton.UseVisualStyleBackColor = false;
+            this.Loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
             // 
             // RoleSelect
             // 
@@ -150,12 +152,30 @@
             this.RoleSelect.Size = new System.Drawing.Size(301, 22);
             this.RoleSelect.TabIndex = 8;
             // 
+            // Exitbtn
+            // 
+            this.Exitbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Exitbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Exitbtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Exitbtn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exitbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Exitbtn.Location = new System.Drawing.Point(442, 267);
+            this.Exitbtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Exitbtn.Name = "Exitbtn";
+            this.Exitbtn.Size = new System.Drawing.Size(97, 38);
+            this.Exitbtn.TabIndex = 9;
+            this.Exitbtn.Text = "Exit";
+            this.Exitbtn.UseVisualStyleBackColor = false;
+            this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(672, 329);
+            this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.RoleSelect);
             this.Controls.Add(this.Loginbutton);
             this.Controls.Add(this.passwrodbox);
@@ -171,7 +191,6 @@
             this.MaximumSize = new System.Drawing.Size(688, 368);
             this.MinimumSize = new System.Drawing.Size(688, 368);
             this.Name = "Login";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.Login_PictureBox)).EndInit();
@@ -190,6 +209,7 @@
         private System.Windows.Forms.TextBox passwrodbox;
         private System.Windows.Forms.Button Loginbutton;
         private System.Windows.Forms.ComboBox RoleSelect;
+        private System.Windows.Forms.Button Exitbtn;
     }
 }
 
